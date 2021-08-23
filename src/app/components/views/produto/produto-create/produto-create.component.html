@@ -1,0 +1,25 @@
+<div class="content">
+
+    <div class="title">
+        <h1>Novo Produto</h1>
+    </div>
+
+    <form>
+        <mat-form-field class="form">
+            <mat-label>Código</mat-label>
+            <input matInput [(ngModel)]="produto.codigo" type="text" name="codigo">
+        </mat-form-field>
+
+        <mat-form-field class="form">
+            <mat-label>Descrição</mat-label>
+            <input matInput [(ngModel)]="produto.descricao" type="text" name="descricao">
+        </mat-form-field>
+        
+        <div class="buttons">
+            <button (click)="create()" class="mat-elevation-z8" mat-raised-button color="primary">Salvar</button>
+            <button (click)="voltarListagemProdutos()" class="mat-elevation-z8" mat-raised-button color="warn">Cancelar</button>
+        </div>
+    </form>
+
+</div>
+
