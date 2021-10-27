@@ -23,7 +23,12 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogConfirmacaoComponent } from './components/views/dialog-confirmacao/dialog-confirmacao.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { LoginComponent } from './components/account/login/login.component';
+import { AuthenticationComponent } from './components/view/authentication/authentication.component';
+import { httpInterceptorProviders } from './components/http-interceptors/';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     NavComponent,
     HomeComponent,
     ProdutoReadComponent,
-    ProdutoCreateComponent
+    ProdutoCreateComponent,
+    DialogConfirmacaoComponent,
+    LoginComponent,
+    AuthenticationComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,9 +58,13 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     FormsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule,
+    MatPaginatorModule
   ],
-  providers: [],
+  providers: [
+    httpInterceptorProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

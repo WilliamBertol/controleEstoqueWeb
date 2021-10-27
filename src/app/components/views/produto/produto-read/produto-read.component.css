@@ -35,6 +35,14 @@ button {
 
 }
 
+.filtroBuscaProdutos {
+    width: 90%;
+}
+
+.filtro {
+    width: 100%;
+    display: inline-block;
+}
 
 
 
